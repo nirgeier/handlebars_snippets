@@ -1,0 +1,27 @@
+<div class="panel panel-success">
+    {{> panelHeading tagName="div" class="panel-heading"}}
+
+    {{#if metadata.link}}
+    {{#link metadata.link metadata.link 'classA'}}{{/link}}
+    {{else}}
+    <h4>{{body}}</h4>
+
+    {{/if}}
+
+</div>
+
+Comments <span class="badge">{{numberOfComments}}</span>:
+<div class="alert alert-warning">
+    {{#each comments}}
+    {{#if author}}
+    By: {{author.firstName}} {{author.lastName}}
+    {{else}}
+    By: <b>Unknown</b>
+    {{/if}}
+    <br/>
+    <sub>{{comment}}</sub>
+
+    <hr/>
+
+    {{/each}}
+</div>

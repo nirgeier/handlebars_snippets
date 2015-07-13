@@ -1,0 +1,15 @@
+<div class="panel panel-success">
+    {{> panelHeading tagName="div" class="panel-heading"}}
+
+    <h4>{{body}}</h4>
+    <div>
+        Comments <span class="badge">{{numberOfComments}}</span>:
+        <div>
+            {{#each comments }}
+            {{> comment}}
+            {{/each}}
+        </div>
+
+    </div>
+
+</div>
